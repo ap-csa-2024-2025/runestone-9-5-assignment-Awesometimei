@@ -7,13 +7,23 @@ public class Main
 {
     public static void main(String[] args)
     {
+        Animal a1 = new Animal("Justin", "Human");
+        a1.matingCall();
+
+        Dog d1 = new Dog("Justin", "German Shepherd");
+        d1.wagTail();
+        d1.matingCall();
+
+        Cat c1 = new Cat("Justin");
+        System.out.println(c1.getLives());
+        c1.matingCall();
+
         ShoppingCart cart = new ShoppingCart();
         cart.add(new Item("bread", 3.25));
         cart.add(new Item("milk", 2.50));
 
-        // Uncomment these to test
-        // cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
-        // cart.add(new DiscountedItem("apples", 1.35, 0.25));
+        cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
+         cart.add(new DiscountedItem("apples", 1.35, 0.25));
 
         cart.printOrder();
     }
